@@ -30,3 +30,29 @@ git config --global http.proxy %HTTP_PROXY%:80
 git init
 git remote add origin https://github.com/amorilio/test.git
 git push -u origin master
+
+
+Create Rails Application
+
+
+1. Install Ruby and verify that bin is added to %PATH%
+2. download and install "DevKit-mingw64-64"
+	a. cd DevKit-mingw64-64 installation dir
+	b. ruby dk.rb init
+	c. edit the generated config.yml file to include installed Ruby directory
+	d. ruby dk.rb install
+3. gem install rails
+4. rails new blog
+5. cd blog
+6. update Gemfile "gem 'tzinfo-data', platforms: [:x64_mingw, :mingw, :mswin, :jruby]" timzone info with x64_mingw
+7. bundle install
+8. Generate model webapp objects:
+	rails generate scaffold post title:string body:text
+	rails generate scaffold comment post_id:integer body:text
+9. Generate DB for created webapp:
+	rake db:migrate
+10. check list of application URLs:
+	rake routes
+11. start rails server:
+	rails server
+
