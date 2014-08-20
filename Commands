@@ -22,8 +22,8 @@ cd to source root directory:
 set HTTP_PROXY www-proxy.us.oracle.com
 
 -- First Time Remote Configuration
-git config user.name amorilio
-git config user.email amorilio@mail.ru
+git config --global user.name "amorilio"
+git config --global user.email "amorilio@mail.ru"
 git config --global http.proxy %HTTP_PROXY%:80
 
 -- Push Git Sources to Github
