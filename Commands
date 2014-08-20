@@ -1,5 +1,22 @@
-GIT CONFIGURATION:
+LOCAL GIT CONFIGURATION:
 
+1. Download and install GIT from : http://git-scm.com/download/win
+2. Check that Git installed and is on path:
+	>git --version
+3. Go to root application directory and create empty GIT repository
+	>git init
+4. Add all files to GIT repository (unnecessary files will be listed in .gitignore) :
+	>git add . 
+5. Check the status of repository:
+	>git status
+6. Commit all new files:
+	>git commit -m "Comment"
+
+
+REMOTE GIT CONFIGURATION (Github/Bitbucket).
+
+1. Create account
+2. Create remote repository to hold your local repository. 
 cd to source root directory:
 
 set HTTP_PROXY www-proxy.us.oracle.com
