@@ -56,3 +56,77 @@ Create Rails Application
 11. start rails server:
 	rails server
 
+
+Rake Options :
+
+Options are ...
+        --backtrace=[OUT]            Enable full backtrace.  OUT can be stderr (default) or stdout.
+        --comments                   Show commented tasks only
+        --job-stats [LEVEL]          Display job statistics. LEVEL=history displays a complete job list
+        --rules                      Trace the rules resolution.
+        --suppress-backtrace PATTERN Suppress backtrace lines matching regexp PATTERN. Ignored if --trace is on.
+    -A, --all                        Show all tasks, even uncommented ones (in combination with -T or -D)
+    -B, --build-all                  Build all prerequisites, including those which are up-to-date.
+    -D, --describe [PATTERN]         Describe the tasks (matching optional PATTERN), then exit.
+    -e, --execute CODE               Execute some Ruby code and exit.
+    -E, --execute-continue CODE      Execute some Ruby code, then continue with normal task processing.
+    -f, --rakefile [FILENAME]        Use FILENAME as the rakefile to search for.
+    -G, --no-system, --nosystem      Use standard project Rakefile search paths, ignore system wide rakefiles.
+    -g, --system                     Using system wide (global) rakefiles (usually '~/.rake/*.rake').
+    -I, --libdir LIBDIR              Include LIBDIR in the search path for required modules.
+    -j, --jobs [NUMBER]              Specifies the maximum number of tasks to execute in parallel. (default is number of CPU cores + 4)
+    -m, --multitask                  Treat all tasks as multitasks.
+    -n, --dry-run                    Do a dry run without executing actions.
+    -N, --no-search, --nosearch      Do not search parent directories for the Rakefile.
+    -P, --prereqs                    Display the tasks and dependencies, then exit.
+    -p, --execute-print CODE         Execute some Ruby code, print the result, then exit.
+    -q, --quiet                      Do not log messages to standard output.
+    -r, --require MODULE             Require MODULE before executing rakefile.
+    -R, --rakelibdir RAKELIBDIR,     Auto-import any .rake files in RAKELIBDIR. (default is 'rakelib')
+        --rakelib
+    -s, --silent                     Like --quiet, but also suppresses the 'in directory' announcement.
+    -t, --trace=[OUT]                Turn on invoke/execute tracing, enable full backtrace. OUT can be stderr (default) or stdout.
+    -T, --tasks [PATTERN]            Display the tasks (matching optional PATTERN) with descriptions, then exit.
+    -v, --verbose                    Log message to standard output.
+    -V, --version                    Display the program version.
+    -W, --where [PATTERN]            Describe the tasks (matching optional PATTERN), then exit.
+    -X, --no-deprecation-warnings    Disable the deprecation warnings.
+    -h, -H, --help                   Display this help message.
+	
+rake about					    List versions of all Rails frameworks and the environment
+rake assets:clean[keep]		    Remove old compiled assets
+rake assets:clobber			    Remove compiled assets
+rake assets:environment		    Load asset compile environment
+rake assets:precompile		    Compile all the assets named in config.assets.precompile
+rake cache_digests:dependencies Lookup first-level dependencies for TEMPLATE (like messages/show or comments/_comment.html)
+rake cache_digests:nested_dependencies    Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)
+rake db:create				    Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV. Without RAILS_ENV it defaults to creating the development and test databases.
+rake db:drop				    Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV. Without RAILS_ENV it defaults to dropping the development and test databases.
+rake db:fixtures:load		    Load fixtures into the current environment's database. Load specific fixtures using FIXTURES=x,y. Load from subdirectory in test/fixtures using FIXTURES_DIR=z. 
+rake db:migrate				    Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog).
+rake db:migrate:status		    Display status of migrations
+rake db:rollback			    Rolls the schema back to the previous version (specify steps w/ STEP=n).
+rake db:schema:cache:clear	    Clear a db/schema_cache.dump file.
+rake db:schema:cache:dump	    Create a db/schema_cache.dump file.
+rake db:schema:dump			    Create a db/schema.rb file that is portable against any DB supported by AR
+rake db:schema:load			    Load a schema.rb file into the database
+rake db:seed				    Load the seed data from db/seeds.rb
+rake db:setup				    Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the database first)
+rake db:structure:dump			Dump the database structure to db/structure.sql. Specify another file with DB_STRUCTURE=db/my_structure.sql
+rake db:version				    Retrieves the current schema version number
+rake doc:app				    Generate docs for the app -- also available doc:rails, doc:guides (options: TEMPLATE=/rdoc-template.rb, TITLE="Custom Title")
+rake log:clear				    Truncates all *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)
+rake middleware				    Prints out your Rack middleware stack
+rake notes					    Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)
+rake notes:custom			    Enumerate a custom annotation, specify with ANNOTATION=CUSTOM
+rake rails:template			    Applies the template supplied by LOCATION=(/path/to/template) or URL
+rake rails:update			    Update configs and some other initially generated files (or use just update:configs or update:bin)
+rake routes					    Print out all defined routes in match order, with names. Target specific controller with CONTROLLER=x.
+rake secret						Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions).
+rake stats					    Report code statistics (KLOCs, etc) from the application
+rake test					    Runs test:units, test:functionals, test:generators, test:integration together
+rake test:all					Run tests quickly by merging all types and not resetting db
+rake test:all:db			    Run tests quickly, but also reset db
+rake time:zones:all			    Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6
+rake tmp:clear				    Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:clear)
+rake tmp:create				    Creates tmp directories for sessions, cache, sockets, and pids
